@@ -1,39 +1,19 @@
-# [Gamemakin](https://gamemak.in) UE4 Style Guide() {
+# UE5 Style Guide
 
-*A mostly reasonable approach to Unreal Engine 4*
+Heavily inspired by the [ue5 style guide](https://github.com/Allar/ue5-style-guide).
 
-Heavily inspired by the [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-80567399-1/repo?useReferrer)](#)
-
-## Repo Notice
-
-This repo is now located at https://github.com/Allar/ue5-style-guide. The default branch of this repository has been renamed `main`.
-
-## This is currently for UE4. For UE5/v2, see the v2 branch
 ## Linter and Style Guide Documentation
 
-More technical documentation regarding Linter and the Style Guide can be found at our [ReadTheDocs](https://ue4-style-guide.readthedocs.io/en/latest/) page.
-
-## Discuss This Style Guide
-
-Gamemakin LLC has a public Discord channel at http://discord.gamemak.in with a #linter channel if you'd like to discuss all things style guide and Linter plugin.
+More technical documentation regarding Linter and the Style Guide can be found at our [ReadTheDocs](https://ue5-style-guide.readthedocs.io/en/latest/) page.
 
 ## Linking To This Document
 
-Every section of this style guide is numbered for both easy reference and easy linking. You can link to any section directly by simply append a hash tag and the section number to the end of http://ue4.style
-For example, if you want to send someone to the first principle of this style guide you would append `#0.1`, resulting in http://ue4.style#0.1.
+Every section of this style guide is numbered for both easy reference and easy linking. You can link to any section directly by simply append a hash tag and the section number to the end of http://ue5.style
+For example, if you want to send someone to the first principle of this style guide you would append `#0.1`, resulting in http://ue5.style#0.1.
 
 ## Forks And Translations
 
 If you have made a notable fork or translation that is not suitable for a pull request into this repo, please submit a pull request to add the fork or translation here.
-
-* [Korean Translation](https://github.com/ymkim50/ue4-style-guide/blob/master/README_Kor.md) by ymkim50
-* [Russian Translation](https://github.com/CosmoMyzrailGorynych/ue4-style-guide-rus/blob/master/README.md) by CosmoMyzrailGorynych
-* [Japanese Translation](https://github.com/akenatsu/ue4-style-guide/blob/master/README.jp.md) by akenatsu
-* [Chinese Translation](https://github.com/skylens-inc/ue4-style-guide/blob/master/README.md) by Beijing Skylens Tech.
-* [Brazilian Portuguese Translation](https://github.com/danlvr/ue5-style-guide/blob/main/README_PTBR.md) by danlvr.
-* [French Translation](https://github.com/Arnaud58/ue5-style-guide/blob/main/README.md) by Arnaud58
 
 ## Table of contents
 - [Important Terminology](#important-terminology)
@@ -44,8 +24,8 @@ If you have made a notable fork or translation that is not suitable for a pull r
     - [Property](#terms-property)
     - [Variable](#terms-variable)
 - [0. Principles](#0)
-  - [0.1 If your UE4 project already has a style guide, you should follow it](#0.1)
-  - [0.2 All structure, assets, and code in any Unreal Engine 4 project should look like a single person created it, no matter how many people contributed](#0.2)
+  - [0.1 If your ue5 project already has a style guide, you should follow it](#0.1)
+  - [0.2 All structure, assets, and code in any Unreal Engine 5 project should look like a single person created it, no matter how many people contributed](#0.2)
   - [0.3 Friends do not let friends have bad style](#0.3)
   - [0.4 A team without a style guide is no team of mine](#0.4)
   - [0.5 Don't Break The Law](#0.5)
@@ -69,6 +49,7 @@ If you have made a notable fork or translation that is not suitable for a pull r
   - [1.2.10 Sounds](#anc-sounds)
   - [1.2.11 User Interface](#anc-ui)
   - [1.2.12 Effects](#anc-effects)
+  - [1.2.13 PaperZD](#anc-paperzd)
 - [2. Content Directory Structure](#structure)
   - [2e1 Example Project Content Structure](#2e1)
   - [2.1 Folder Names](#structure-folder-names)
@@ -207,9 +188,9 @@ When in the context of a class, it is often used to convey discussion about its 
 These principles have been adapted from [idomatic.js style guide](https://github.com/rwaldron/idiomatic.js/).
 
 <a name="0.1"></a>
-### 0.1 If your UE4 project already has a style guide, you should follow it
+### 0.1 If your UE5 project already has a style guide, you should follow it
 
-If you are working on a project or with a team that has a pre-existing style guide, it should be respected.  Any inconsistency between an existing style guide and this guide should defer to the existing.
+If you are working on a project or with a team that has a pre-existing style guide, it should be respected. Any inconsistency between an existing style guide and this guide should defer to the existing.
 
 Style guides should be living documents. You should propose style guide changes to an existing style guide as well as this guide if you feel the change benefits all usages.
 
@@ -217,7 +198,7 @@ Style guides should be living documents. You should propose style guide changes 
 > [_Rebecca Murphey_](https://rmurphey.com)
 
 <a name="0.2"></a>
-### 0.2 All structure, assets, and code in any Unreal Engine 4 project should look like a single person created it, no matter how many people contributed
+### 0.2 All structure, assets, and code in any Unreal Engine 5 project should look like a single person created it, no matter how many people contributed
 
 Moving from one project to another should not cause a re-learning of style and structure. Conforming to a style guide removes unneeded guesswork and ambiguities.
 
@@ -235,12 +216,12 @@ If you are helping someone whose work conforms to a different but consistent and
 <a name="0.4"></a>
 ### 0.4 A team without a style guide is no team of mine
 
-When joining an Unreal Engine 4 team, one of your first questions should be "Do you have a style guide?". If the answer is no, you should be skeptical about their ability to work as a team.
+When joining an Unreal Engine 5 team, one of your first questions should be "Do you have a style guide?". If the answer is no, you should be skeptical about their ability to work as a team.
 
 <a name="0.5"></a>
 ### 0.5 Don't Break The Law
 
-Gamemakin LLC is not a lawyer, but please don't introduce illegal actions and behavior to a project, including but not limited to:
+Don't introduce illegal actions and behavior to a project, including but not limited to:
 
 * Don't distribute content you don't have the rights to distribute
 * Don't infringe on someone else's copyrighted or trademark material
@@ -249,8 +230,6 @@ Gamemakin LLC is not a lawyer, but please don't introduce illegal actions and be
 
 <a name="00"></a>
 ## 00. Globally Enforced Opinions
-
-@TODO: Make this section 1 and update this document accordingly. Or maybe we don't?
 
 <a name="00.1"></a>
 ### 00.1 Forbidden Characters
@@ -459,7 +438,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Camera Anim                | CA_        |            |                                  |
 | Color Curve                | Curve_     | _Color     |                                  |
 | Curve Table                | Curve_     | _Table     |                                  |
-| Data Asset                 | *_         |            | Prefix should be based on class. |
+| Data Asset                 | DA_        |            |                                  |
 | Data Table                 | DT_        |            |                                  |
 | Float Curve                | Curve_     | _Float     |                                  |
 | Foliage Type               | FT_        |            |                                  |
@@ -537,6 +516,16 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Particle System         | PS_        |            |                                  |
 | Material (Post Process) | PP_        |            |                                  |
 
+<a name="anc-paperzd"></a>
+<a name="1.2.13"></a>
+### 1.2.13 PaperZD
+
+| Asset Type              | Prefix     | Suffix     | Notes                            |
+| ----------------------- | ---------- | ---------- | -------------------------------- |
+| Animation Sequence      | A_         |            |                                  |
+| Animation Source        | AS_        |            |                                  |
+| PaperZD AnimBP          | ABP_       |            |                                  |
+
 **[⬆ Back to Top](#table-of-contents)**
 
 <a name="2"></a>
@@ -545,7 +534,9 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 
 Equally important as asset names, the directory structure style of a project should be considered law. Asset naming conventions and content directory structure go hand in hand, and a violation of either causes unneeded chaos.
 
-There are multiple ways to lay out the content of a UE4 project. In this style, we will be using a structure that relies more on filtering and search abilities of the Content Browser for those working with assets to find assets of a specific type instead of another common structure that groups asset types with folders.
+There are multiple ways to lay out the content of a UE5 project. In this style, we will be using a structure that relies more on filtering and search abilities of the Content Browser for those working with assets to find assets of a specific type instead of another common structure that groups asset types with folders.
+
+As we are seeking to take a very heavy modular apprach with Plugins and GameFeatures, the structure should be mirrored between the `Core` game content directory structure and the `Plugin` content directory structure.
 
 > If you are using the prefix [naming convention](#1.2) above, using folders to contain assets of similar types such as `Meshes`, `Textures`, and `Materials` is a redundant practice as asset types are already both sorted by prefix as well as able to be filtered in the content browser.
 
@@ -626,7 +617,7 @@ Re-enforcing [2.1.1](#2.1.1), never use spaces. Spaces can cause various enginee
 <a name="2.1.3"></a>
 #### 2.1.3 Never Use Unicode Characters And Other Symbols
 
-If one of your game characters is named 'Zoë', its folder name should be `Zoe`. Unicode characters can be worse than [Spaces](#2.1.2) for engineering tool and some parts of UE4 don't support Unicode characters in paths either.
+If one of your game characters is named 'Zoë', its folder name should be `Zoe`. Unicode characters can be worse than [Spaces](#2.1.2) for engineering tool and some parts of ue5 don't support Unicode characters in paths either.
 
 Related to this, if your project has [unexplained issues](https://answers.unrealengine.com/questions/101207/undefined.html) and your computer's user name has a Unicode character (i.e. your name is `Zoë`), any project located in your `My Documents` folder will suffer from this issue. Often simply moving your project to something like `D:\Project` will fix these mysterious issues.
 
@@ -842,7 +833,7 @@ All booleans should be named in PascalCase but prefixed with a lowercase `b`.
 
 Example: Use `bDead` and `bEvil`, **not** `Dead` and `Evil`.
 
-UE4 Blueprint editors know not to include the `b` in user-friendly displays of the variable.
+UE5 Blueprint editors know not to include the `b` in user-friendly displays of the variable.
 
 <a name="3.2.1.4"></a>
 <a name="bp-var-bool-names"></a>
@@ -1374,7 +1365,7 @@ Levels should not have any [z-fighting](https://en.wikipedia.org/wiki/Z-fighting
 <a name="levels-mp-rules"></a>
 ### 6.4 Marketplace Specific Rules
 
-If a project is to be sold on the UE4 Marketplace, it must follow these rules.
+If a project is to be sold on the ue5 Marketplace, it must follow these rules.
 
 <a name="6.4.1"></a>
 <a name="levels-mp-rules-overview"></a>
@@ -1435,17 +1426,11 @@ Every texture has a Texture Group property used for LODing, and this should be s
 
 **[⬆ Back to Top](#table-of-contents)**
 
-
-## Major Contributors
-
-* [Michael Allar](http://allarsblog.com): [GitHub](https://github.com/Allar), [Twitter](https://twitter.com/michaelallar)
-* [CosmoMyzrailGorynych](https://github.com/CosmoMyzrailGorynych)
-* [billymcguffin](https://github.com/billymcguffin)
-* [akenatsu](https://github.com/akenatsu)
-
 ## License
 
-Copyright (c) 2016 Gamemakin LLC
+Copyright © 2023 Lewis Ward
+
+Copyright © 2016 Gamemakin LLC
 
 See [LICENSE](/LICENSE)
 
@@ -1455,5 +1440,3 @@ See [LICENSE](/LICENSE)
 ## Amendments
 
 We encourage you to fork this guide and change the rules to fit your team's style guide. Below, you may list some amendments to the style guide. This allows you to periodically update your style guide without having to deal with merge conflicts.
-
-# };
